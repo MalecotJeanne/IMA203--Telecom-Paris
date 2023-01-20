@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*
+#%% 
 import numpy as np
 import platform
 import tempfile
@@ -16,13 +17,13 @@ from skimage.feature import peak_local_max
 #%%
 # VOUS DEVEZ FIXER LES DEUX VARIABLES SUIVANTES: 
 colaboratory=False #mettre True si vous utilisez google colab
-notebook=False   # mettre Trus si vous utilisez un notebook local
+notebook=True   # mettre Trus si vous utilisez un notebook local
 # les seuls couples possibles sont (False,False)= travailler localement sans notebook
 # (False,True): jupyternotebook local
 # (True, False): google colab
 
 
-assert (not (colaboratory and notebook)), "Erreur, choisissez google colab ou notebook local mais pas les deux en meme temps"
+assert ((not colaboratory) and notebook), "Erreur, choisissez google colab ou notebook local mais pas les deux en meme temps"
 
 if colaboratory: #Si google colab on installe certaines librairies
     !pip install soundfile
